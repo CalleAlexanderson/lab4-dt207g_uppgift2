@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  header {
+    position: relative;
+    border-bottom: 2px solid black;
+    height: 80px;
+    > a {
+      width: 200px;
+      height: 80px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      img {
+        height: 100%;
+      }
+    }
+
+    h1 {
+      position: absolute;
+      left: 65%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.4rem;
+    }
+
+    #pc_nav {
+      visibility: hidden;
+      position: absolute;
+    }
+
+    button {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      border-radius: 10px;
+      img {
+        height: 100%;
+      }
+    }
+
+    #mobile_menu {
+      visibility: hidden;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      z-index: 0;
+      ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        list-style: none;
+        li {
+          margin: 20px auto;
+          text-align: center;
+          width: 120px;
+          padding: 5px;
+          font-size: 1.2rem;
+          border: 1px solid black;
+          a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.currentSite {
+  background-color: lightblue;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    header {
+      height: 160px;
+      h1 {
+        left: 50%;
+        top: 70%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 901px) {
+  body {
+    header {
+      h1 {
+        position: absolute;
+        left: 40%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2.4rem;
+      }
+
+      #pc_nav {
+        visibility: visible;
+        width: 400px;
+        height: 100%;
+        right: 5%;
+        top: 0;
+        ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          margin-top: 40px;
+          transform: translate(0, -50%);
+          list-style: none;
+          li {
+            padding: 5px;
+            font-size: 1.2rem;
+            text-align: center;
+            a {
+              color: black;
+            }
+            a:hover{
+              color: darkcyan;
+            }
+          }
+        }
+      }
+
+      #mobile_btn {
+        visibility: hidden;
+      }
+
+      #mobile_menu {
+        visibility: hidden;
+      }
+    }
+  }
+
+  .currentSite {
+    background-color: initial;
+    border: 2px solid black;
+    margin-top: -2px;
+  }
+}
