@@ -34,8 +34,11 @@ async function logIn(userDetails) {
         });
         const res = await response.json();
         console.log(res)
-        sessionStorage.setItem("user", res[0].accountUserName)
+        sessionStorage.setItem("user", res.user[0].accountUserName)
+        localStorage.setItem("token", res.token)
         console.log(sessionStorage.getItem("user"));
+        console.log(localStorage.getItem("token"));
+        document.location.href = "http://localhost:1234/index.html";
     } else {
         document.getElementById('login_msg').innerHTML = "Var snäll och fyll i alla fält";
     }

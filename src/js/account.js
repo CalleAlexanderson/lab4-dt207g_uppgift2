@@ -23,7 +23,7 @@ async function createAccount(accDetails) {
     console.log("formulär skickat");
     console.log(accDetails);
     let newAccount;
-
+    accDetails[0][1] = accDetails[0][1].replace(/(<([^>]+)>)/ig,''); // tar bort tags från accountUserName eftersom det skrivs ut på webbsidan sen
     if (accDetails[0][1] != "" && accDetails[1][1] != "" && accDetails[2][1] != "" && accDetails[3][1] != "") {
         newAccount = {
             "accountUserName": accDetails[0][1],
