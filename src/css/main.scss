@@ -1,4 +1,55 @@
 .message{
     color: red;
     font-weight: bold;
+    width: 400px;
+    max-width: 90%;
+    margin: 20px auto;
+}
+.login_create{
+    width: 400px;
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    width: 90%;
+    margin: 10px auto;
+    max-width: 1200px;
+    #cat_div{
+        max-width: 1180px;
+        margin: auto;
+        display: flex;
+        img{
+            max-width: 590px;
+            width: 50%;
+        }
+    }
+
+    #logged_in{
+        width: 100px;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #cat_link{
+        width: 300px;
+        margin: auto;
+        text-align: center;
+    }
+
+    form{
+        width: 400px;
+        max-width: 90%;
+        margin: auto;
+        button{
+            padding: 2px;
+            font-size: 1.2rem;
+        }
+    }
 }

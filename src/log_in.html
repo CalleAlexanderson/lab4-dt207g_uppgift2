@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/main.scss">
     <link rel="stylesheet" href="css/header.scss">
     <script type="module" src="js/login.js"></script>
-    <title>Document</title>
+    <title>Logga in</title>
 </head>
 <body>
     <header>
@@ -34,6 +34,7 @@
     </header>
     
     <main>
+        <p class="login_create">Har inget konto? <a href="create_acc.html">Skapa konto</a></p>
         <form action="post" id="log_in">
             <label for="logAccName">Användarnamn:</label><br>
             <input type="text" id="logAccName" name="logAccName"><br><br>
@@ -42,7 +43,6 @@
             <button type="submit">Logga in</button>
         </form>
         <p class="message" id="login_msg"></p>
-        <p>Har inget konto? <a href="create_acc.html">Skapa konto</a></p>
     </main>
 </body>
 </html>

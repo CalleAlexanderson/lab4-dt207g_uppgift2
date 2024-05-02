@@ -13,6 +13,14 @@ function init() {
         console.log(valuesLogin);
         logIn(valuesLogin);
     });
+    let user = sessionStorage.getItem("user");
+    if (user != "" && user != null) {
+        console.log(user);
+        document.getElementsByClassName('login_create')[0].innerHTML = `Du är inloggad som: ${user}<br> <a href="create_acc.html">Skapa nytt konto</a>`;
+    } else {
+        document.getElementsByClassName('login_create')[0].innerHTML = `Har inget konto? <a href="create_acc.html">Skapa konto</a>`;
+        console.log("finns inte");
+    }
 } // Slut init
 window.addEventListener('load', init);
 // --------------------------------------------------
