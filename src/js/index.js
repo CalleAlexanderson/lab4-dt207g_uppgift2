@@ -3,7 +3,7 @@
 // --------------------------------------------------
 // Initiera globala variabler och händelsehanterare
 function init(){
-    getCatLink();
+    getCatInfo();
     let user = sessionStorage.getItem("user");
     if (user != "" && user != null) {
         console.log(user);
@@ -18,7 +18,7 @@ function init(){
 window.addEventListener('load', init);
 // --------------------------------------------------
 
-async function getCatLink() {
+async function getCatInfo() {
     let token = localStorage.getItem("token");
     
     const response = await fetch(`http://127.0.0.1:3000/users/protected`, {
